@@ -9,12 +9,12 @@ app.setErrorHandler((error, request, reply) => {
 })
 
 const start = async () => {
-
     await app.register(cors);
     await app.register(routes);
 
     try {
-        await app.listen({port: 3333})
+        const port = Number(process.env.PORT) || 3333;
+        await app.listen({ port, host: '0.0.0.0' });
     } catch (error) {
         process.exit(1);
     }
