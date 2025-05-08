@@ -54,3 +54,17 @@ Para rodar o projeto
 # Vai colocar a api no ar
 npm run dev
 ```
+
+### 🗄️ Banco de Dados
+
+A API utiliza **MongoDB** como banco de dados não relacional.
+
+### Conexão com o banco
+
+A string de conexão é definida no arquivo `.env`:
+
+```env
+# Configure o arquivo .env com base no .env.example
+# Exemplo de variáveis:
+MONGO_URI=mongodb+srv://usuario:senha@cluster.mongodb.net/nome-do-banco
+```
